@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" class="bg0 text-fg0 dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MoA Chat</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/static/style.css" />
+    </head>
+    <body class="bg0 text-fg0 transition-colors duration-300">
+        <div class="min-h-screen flex flex-col justify-between p-4">
+            <header class="flex items-center justify-between mb-4">
+                <h1 class="text-2xl font-bold">MoA Chat</h1>
+                <div class="space-x-2">
+                    <button
+                        id="toggleConfig"
+                        class="bg-blue px-3 py-1 rounded text-fg0 hover:bg-purple transition"
+                    >
+                        Config
+                    </button>
+                    <button
+                        id="themeToggle"
+                        class="bg-blue px-3 py-1 rounded text-fg0 hover:bg-purple transition"
+                    >
+                        Theme
+                    </button>
+                </div>
+            </header>
+
+            <div id="configPanel" class="bg1 rounded p-4 mb-4 hidden">
+                <h2 class="text-lg font-semibold mb-2">Model Selection</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label for="modelA" class="block mb-1">LLM-A</label>
+                        <select
+                            id="modelA"
+                            class="w-full rounded p-2 bg-statusline1"
+                        >
+                            <option value="deepseek/deepseek-chat-v3-0324">
+                                DeepSeek Chat v3
+                            </option>
+                            <option value="google/gemini-2.0-flash-exp">
+                                Gemini 2.0 Flash
+                            </option>
+                            <option value="meta-llama/llama-4-maverick">
+                                LLaMA 4 Maverick
+                            </option>
+                            <option value="microsoft/mai-ds-r1">
+                                MAI DS R1
+                            </option>
+                            <option value="meta-llama/llama-4-scout">
+                                LLaMA 4 Scout
+                            </option>
+                            <option value="google/gemma-3-27b-it">
+                                Gemma 3 27B
+                            </option>
+                            <option value="qwen/qwq-32b">Qwen QWQ 32B</option>
+                            <option value="qwen/qwen2.5-vl-72b-instruct">
+                                Qwen2.5 VL 72B
+                            </option>
+                            <option value="qwen/qwen-2.5-72b-instruct">
+                                Qwen 2.5 72B
+                            </option>
+                            <option value="google/gemini-2.5-pro-exp-03-25">
+                                Gemini 2.5 Pro
+                            </option>
+                            <option value="deepseek/deepseek-r1">
+                                DeepSeek R1
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="modelB" class="block mb-1">LLM-B</label>
+                        <select
+                            id="modelB"
+                            class="w-full rounded p-2 bg-statusline1"
+                        >
+                            <option value="deepseek/deepseek-chat-v3-0324">
+                                DeepSeek Chat v3
+                            </option>
+                            <option value="google/gemini-2.0-flash-exp">
+                                Gemini 2.0 Flash
+                            </option>
+                            <option value="meta-llama/llama-4-maverick">
+                                LLaMA 4 Maverick
+                            </option>
+                            <option value="microsoft/mai-ds-r1">
+                                MAI DS R1
+                            </option>
+                            <option value="meta-llama/llama-4-scout">
+                                LLaMA 4 Scout
+                            </option>
+                            <option value="google/gemma-3-27b-it">
+                                Gemma 3 27B
+                            </option>
+                            <option value="qwen/qwq-32b">Qwen QWQ 32B</option>
+                            <option value="qwen/qwen2.5-vl-72b-instruct">
+                                Qwen2.5 VL 72B
+                            </option>
+                            <option value="qwen/qwen-2.5-72b-instruct">
+                                Qwen 2.5 72B
+                            </option>
+                            <option value="google/gemini-2.5-pro-exp-03-25">
+                                Gemini 2.5 Pro
+                            </option>
+                            <option value="deepseek/deepseek-r1">
+                                DeepSeek R1
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="modelC" class="block mb-1">LLM-C</label>
+                        <select
+                            id="modelC"
+                            class="w-full rounded p-2 bg-statusline1"
+                        >
+                            <option value="deepseek/deepseek-chat-v3-0324">
+                                DeepSeek Chat v3
+                            </option>
+                            <option value="google/gemini-2.0-flash-exp">
+                                Gemini 2.0 Flash
+                            </option>
+                            <option value="meta-llama/llama-4-maverick">
+                                LLaMA 4 Maverick
+                            </option>
+                            <option value="microsoft/mai-ds-r1">
+                                MAI DS R1
+                            </option>
+                            <option value="meta-llama/llama-4-scout">
+                                LLaMA 4 Scout
+                            </option>
+                            <option value="google/gemma-3-27b-it">
+                                Gemma 3 27B
+                            </option>
+                            <option value="qwen/qwq-32b">Qwen QWQ 32B</option>
+                            <option value="qwen/qwen2.5-vl-72b-instruct">
+                                Qwen2.5 VL 72B
+                            </option>
+                            <option value="qwen/qwen-2.5-72b-instruct">
+                                Qwen 2.5 72B
+                            </option>
+                            <option value="google/gemini-2.5-pro-exp-03-25">
+                                Gemini 2.5 Pro
+                            </option>
+                            <option value="deepseek/deepseek-r1">
+                                DeepSeek R1
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <main
+                id="chatContainer"
+                class="flex-1 overflow-y-auto bg1 p-4 rounded shadow-md space-y-4"
+            >
+                <!-- Messages injected here -->
+            </main>
+
+            <form id="chatForm" class="mt-4 flex">
+                <input
+                    id="userInput"
+                    type="text"
+                    placeholder="Ask something..."
+                    class="flex-1 px-4 py-2 rounded-l border-none bg-statusline1 text-fg0 placeholder-fg1 focus:outline-none"
+                />
+                <button
+                    type="submit"
+                    class="px-4 py-2 bg-green text-fg0 rounded-r hover:bg-visual_green transition"
+                >
+                    Send
+                </button>
+            </form>
+        </div>
+
+        <script src="/static/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+/* Gruvbox Material Theme: Light & Dark */
+:root {
+    --bg0: #f2e5bc;
+    --bg1: #eddeb5;
+    --bg-statusline1: #ebdbb2;
+    --bg-statusline2: #ebdbb2;
+    --fg0: #654735;
+    --fg1: #4f3829;
+    --blue: #45707a;
+    --green: #6c782e;
+    --purple: #945e80;
+    --visual_green: #d7d9ae;
+}
+
+.dark {
+    --bg0: #32302f;
+    --bg1: #3c3836;
+    --bg-statusline1: #3c3836;
+    --bg-statusline2: #46413e;
+    --fg0: #d4be98;
+    --fg1: #ddc7a1;
+    --blue: #7daea3;
+    --green: #a9b665;
+    --purple: #d3869b;
+    --visual_green: #a9b665;
+}
+
+body {
+    background-color: var(--bg0);
+    color: var(--fg0);
+}
+
+input,
+button,
+#chatContainer {
+    background-color: var(--bg1);
+    color: var(--fg0);
+}
+
+input::placeholder {
+    color: var(--fg1);
+}
+
+button {
+    background-color: var(--green);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--visual_green);
+}
