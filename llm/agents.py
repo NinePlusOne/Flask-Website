@@ -1,6 +1,11 @@
 import asyncio
 import httpx
 import os
+import dotenv
+
+# Ensure environment variables from a .env file are available before
+# we construct any request headers that rely on them.
+dotenv.load_dotenv()
 
 OPENROUTER_BASE = "https://openrouter.ai/api/v1/chat/completions"
 HEADERS = {
